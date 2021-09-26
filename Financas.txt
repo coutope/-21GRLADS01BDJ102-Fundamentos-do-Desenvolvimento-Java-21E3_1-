@@ -1,0 +1,10 @@
+26/09/2021;Contas ;true;Evan;123456789-10;evan@rispoli.com.br
+R;01/10/2021;Pagamento;Salário;Renda Principal;true;3525.0;Necessário;INFNET;1;Lançamento Quinzenal;
+D;15/10/2021;Conta de luz;Energia Elétrica;Moradia;true;500.0;Necessário;LIGHT;2;Lançamento Mensal
+O;30/10/2021;Canadá 2022;Conta Poupança;Economias;true;500.0;Desejável;Férias;1;Depósito Mensal;
+R;05/10/2021;Comissão;Salário;Renda Complementar;true;3525.0;Desejado;Loja ABC;2;Lançamento Mensal;
+D;20/10/2021;Conta de Telefone;Telefone;Moradia;true;150.0;Necessário;VIVO;2;Lançamento Mensal
+O;30/10/2021;Maricá;Conta Poupança;Economias;true;10000.0;Desejável;Férias 2022;2;Depósito Anual;
+R;05/10/2021;Deu bom;Presente;Renda extra;true;100.0;Desejado;Elberth;0;Lançamento Único;
+D;25/10/2021;RENAVAM;IPVA;Transporte;true;2500.0;Necessário;DETRAN-RJ;5;Lançamento Anual;
+O;30/10/2021;Turbo;Carro Novo;Economias;true;50000.0;Desejável;Carro Novo;1;Depósito Mensal;

@@ -1,0 +1,157 @@
+        do{
+            System.out.println("[1] Cadastrar Receita");
+            System.out.println("[2] Cadastrar Despesa");
+            System.out.println("[3] Consultar uma categoria");
+            System.out.println("[4] Consultar todos");
+            System.out.println("[5] Sair");
+            System.out.print("Informe a opcao desejada: ");
+            opcao = in.nextInt();
+
+            if(Arrays.asList(OPCOES).contains(opcao)) {
+                switch (opcao) {
+                    case 1://Receita
+                        if(i < QTDE) {
+
+                            Receita income1 = new Receita();
+                            System.out.println("Determine um nome para essa receita: ");
+                            income1.setNome(in.next());
+
+                            System.out.println("Informe o valor do recebivel: ");
+                            income1.setValor(in.nextFloat());
+
+                            System.out.println("Descricao: ");
+                            income1.setDescricao(in.next());in.nextLine();
+
+                            System.out.println("Informe o dia de pagamento:");
+                            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+                            income1.setData(LocalDate.parse(in.next(),formatter));
+
+
+                            System.out.println("Informe o nome da fonte de renda:");
+                            income1.setFonte(in.next());in.nextLine();
+
+                            System.out.println("    Selecione a categoria da receita:");
+                            System.out.println("    [1] Renda principal");
+                            System.out.println("    [2] Retorno sobre investimentos");
+                            System.out.println("    [3] Renda conjuge");
+                            System.out.println("    [4] Extra");
+                            int opcaoReceita = in.nextInt();
+                            if(opcaoReceita == 1){
+                                income1.setCategoria("Renda principal");
+                            }else if(opcaoReceita == 2){
+                                income1.setCategoria("Retorno sobre investimentos");
+                            }else if(opcaoReceita == 3){
+                                income1.setCategoria("Renda conjuge");
+                            }else if(opcaoReceita == 4){
+                                income1.setCategoria("Extra");
+                            }else{
+                                income1.setCategoria("Sem categoria");
+                            }
+                            categorias[i] = income1;
+
+                            System.out.println("Categoria "+ income1.getNome() +" cadastrada com sucesso" );
+                            i++;
+                        }else{
+                            System.out.println("Nao foi possivel cadastrar a receita");
+                        }
+
+                        break;
+
+                    case 2: //Despesa
+
+                        if(i < QTDE) {
+
+                            Despesa outgoing1 = new Despesa();
+
+                            System.out.println("Determine um nome para essa despesa: ");
+                            outgoing1.setNome(in.next());
+
+                            System.out.println("Informe o valor devido: ");
+                            outgoing1.setValor(in.nextFloat());
+
+                            System.out.println("Descricao: ");
+                            outgoing1.setDescricao(in.next());in.nextLine();
+
+                            System.out.println("Informe o dia de vencimento:");
+                            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+                            outgoing1.setData(LocalDate.parse(in.next(),formatter));
+
+
+                            System.out.println("Informe o nome do beneficiario:");
+                            outgoing1.setBeneficiario(in.next());in.nextLine();
+
+                            System.out.println("    Selecione a categoria da Despesa:");
+                            System.out.println("    [1] Essencial");
+                            System.out.println("    [2] Desejável");
+                            System.out.println("    [3] Lazer/Cultura");
+
+                            int opcaoDespesa = in.nextInt();
+                            if(opcaoDespesa == 1){
+                                outgoing1.setCategoria("Essencial");
+                            }else if(opcaoDespesa == 2){
+                                outgoing1.setCategoria("Desejável");
+                            }else if(opcaoDespesa == 3){
+                                outgoing1.setCategoria("Renda Lazer/Cultura");
+                            }else{
+                                outgoing1.setCategoria("Sem categoria");
+                            }
+                            categorias[i] = outgoing1;
+
+                            System.out.println("Categoria "+ outgoing1.getNome() +" cadastrada com sucesso" );
+                            i++;
+                        }else{
+                            System.out.println("Nao foi possivel cadastrar a despesa");
+                        }
+
+                        break;
+
+                    case 3: //Objetivo
+
+                    Objetivo saving = new Objetivo();
+
+                    System.out.println("Determine um nome para essa despesa: ");
+                    saving.setNome(in.next());
+
+                    System.out.println("Informe o valor devido: ");
+                    saving.setValor(in.nextFloat());
+
+                    System.out.println("Descricao: ");
+                    saving.setDescricao(in.next());in.nextLine();
+
+                    System.out.println("Informe o dia de vencimento:");
+                    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+                    saving.setData(LocalDate.parse(in.next(),formatter));
+
+
+                    System.out.println("Informe o nome do beneficiario:");
+                    saving.setBeneficiario(in.next());in.nextLine();
+
+                    System.out.println("    Selecione a categoria da Despesa:");
+                    System.out.println("    [1] Essencial");
+                    System.out.println("    [2] Desejável");
+                    System.out.println("    [3] Lazer/Cultura");
+
+                    int opcaoObjetivo = in.nextInt();
+                    if(opcaoObjetivo == 1){
+                        saving.set("Essencial");
+                    }else if(opcaoObjetivo == 2){
+                        saving.setCategoria("Desejável");
+                    }else if(opcaoObjetivo == 3){
+                        saving.setCategoria("Renda Lazer/Cultura");
+                    }else{
+                        saving.setCategoria("Sem categoria");
+                    }
+                    categorias[i] = saving;
+
+                    System.out.println("Categoria "+ saving.getNome() +" cadastrada com sucesso" );
+                    i++;
+                }else{
+                    System.out.println("Nao foi possivel cadastrar a despesa");
+                }
+
+                break;
+                }
+            }
+
+        }while (opcao != 5);
+    }
