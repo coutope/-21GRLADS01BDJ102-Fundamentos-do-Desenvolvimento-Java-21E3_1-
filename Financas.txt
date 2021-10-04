@@ -1,4 +1,4 @@
-26/09/2021;Contas ;true;Evan;123456789-10;evan@rispoli.com.br
+26/09/2021;Contas ;true;;123456789-10;
 R;01/10/2021;Pagamento;Salário;Renda Principal;true;3525.0;Necessário;INFNET;1;Lançamento Quinzenal;
 D;15/10/2021;Conta de luz;Energia Elétrica;Moradia;true;500.0;Necessário;LIGHT;2;Lançamento Mensal
 O;30/10/2021;Canadá 2022;Conta Poupança;Economias;true;500.0;Desejável;Férias;1;Depósito Mensal;
